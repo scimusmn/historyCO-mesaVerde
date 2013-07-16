@@ -12,31 +12,39 @@ body {
 }
 .wrapper {
   padding: 18px;
+  width: 1884px;
 }
 
 h1 {
-  font-family: "Archer Bold", "Bookman Old Style"; /* To do - Get this font from Wendie */
-  font-size: 23px;
-  margin-bottom: 20px;
-  font-weight: normal;
-}
-h2 {
-  font-family: "Tungsten-Semibold";
-  font-size: 36px;
   text-transform: uppercase;
-  margin: 12px 0 0;
+  color: #f8f1d6;
+  margin: 85px 0 33px;
+  font-size: 1.5em;
+  letter-spacing: 0.07em;
+  font-family: "Tungsten-Semibold";
+}
+h1 span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 h3 {
-  font-family: "ProximaNova Semibold", "Myriad Pro"; /* To do - Get this font from Wendie */
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0;
+  color: #FFFFFF;
+  font-family: "ProximaNova Semibold", "Myriad Pro";
+  letter-spacing: 0.04em;
+  font-size: 1.3em;
+  padding: 10px 60px;
 }
 
+#step-1-wrap {
+  margin: 0 auto;
+  width: 1780px;
+}
 div.section {
   float: left;
   width: 375px;
   margin-right: 40px;
+  text-align: center;
 }
 div.section.last {
   margin-right: 0;
