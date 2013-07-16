@@ -22,8 +22,25 @@
           </div>
         {{/each}}
       </script>
-
       <div id="step-1-output"></div>
+    </div>
+
+    <div id="step-2-wrap">
+      <!-- Handlebars template -->
+      <script id="template-2" type="text/x-handlebars-template">
+        {{#each options}}
+          <div class="option" data-option-id="{{machine_name}}">
+            <h2>{{step_2_title}}</h2>
+            <ul>
+              {{#each questions}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+            <img src="../assets/images/{{machine_name}}/step2.jpg">
+          </div>
+        {{/each}}
+      </script>
+      <div id="step-2-output"></div>
     </div>
 
     <!--<div class="hidden">
