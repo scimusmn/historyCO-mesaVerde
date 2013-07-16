@@ -23,7 +23,7 @@ $(function() {
       $('#step-2-wrap').fadeIn('fast', function() {
         $(this).addClass('active');
         // Show the selected content
-        $('div[data-option-id="'+ selected +'"]').show();
+        $('div[data-option-id="'+ selected +'"]').add('#step-2-wrap .back').show();
       });
     });
   });
