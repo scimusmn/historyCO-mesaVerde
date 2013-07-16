@@ -20,7 +20,20 @@ $(function() {
   $('div.section').click(function() {
     var selected = $(this).attr('data-option-id');
     $('#step-1-wrap').fadeOut('slow', function() {
-      $('#step-2-wrap').fadeIn('fast');
+      $('#step-2-wrap').fadeIn('fast', function() {
+        $(this).addClass('active');
+        // Show the selected content
+        $('div[data-option-id="'+ selected +'"]').show();
+      });
+    });
+  });
+
+  // Back buttons
+  $('.back').click(function() {
+    var destination = $(this).attr('data-dest'); // where are we going?
+    // Fade out the current screen and route over to the destination
+    $('.active').removeClass('active').fadeOut('fast', function() {
+      $('#' + destination + '-wrap').fadeIn('fast');
     });
   });
 
