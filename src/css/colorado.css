@@ -10,12 +10,16 @@ body {
   width: 1920px;
   overflow: hidden;
 }
-.wrapper {
+div.wrapper {
   padding: 18px;
   width: 1884px;
 }
+div.step {
+  margin: 0 auto;
+  width: 1780px;
+}
 
-h1 {
+h1, h2 {
   text-transform: uppercase;
   color: #f8f1d6;
   margin: 85px 0 33px;
@@ -36,10 +40,7 @@ h3 {
   padding: 10px 60px;
 }
 
-#step-1-wrap {
-  margin: 0 auto;
-  width: 1780px;
-}
+/* Step 1 */
 div.section {
   float: left;
   width: 375px;
@@ -50,6 +51,30 @@ div.section.last {
   margin-right: 0;
 }
 
-.hidden {
+/* Step 2 */
+.option ul {
+  float: left;
+  width: 50%;
+}
+.option li {
+  font-size: 32px;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+.option img {
+  float: right;
+  width: 50%;
+  height: 540px;
+  width: 720px;
+}
+
+.back {
+  clear: both;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+.hidden,
+.option {
   display: none;
 }
