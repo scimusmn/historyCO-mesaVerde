@@ -19,11 +19,11 @@ $(function() {
   // Navigation over to step 2
   $('div.section').click(function() {
     var selected = $(this).attr('data-option-id');
+    // Show the selected content
     $('#step-1-wrap').fadeOut('slow', function() {
+      $('div[data-option-id="'+ selected +'"]').add('#step-2-wrap .back').show();
       $('#step-2-wrap').fadeIn('fast', function() {
         $(this).addClass('active');
-        // Show the selected content
-        $('div[data-option-id="'+ selected +'"]').add('#step-2-wrap .back').show();
       });
     });
   });
@@ -31,8 +31,10 @@ $(function() {
   // Back buttons
   $('.back').click(function() {
     var destination = $(this).attr('data-dest'); // where are we going?
-    // Fade out the current screen and route over to the destination
-    $('.active').removeClass('active').fadeOut('fast', function() {
+    // Hide current screen and move to destination
+    $('.active').fadeOut('fast', function() {
+      $('.active .option').hide();
+      $(this).removeClass('active');
       $('#' + destination + '-wrap').fadeIn('fast');
     });
   });
