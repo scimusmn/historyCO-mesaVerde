@@ -1,5 +1,5 @@
 var content = {
-  options : {
+  options: [
     {
       title : "Contemporary Pueblo people",
       step_2_title : "What can this modern Pueblo dancer tell us about her ancestors?",
@@ -48,5 +48,5 @@ var content = {
       },
       machine_name : "mvreg"
     }
-  }
-}
+  ]
+};

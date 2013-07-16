@@ -10,20 +10,37 @@
 
   <div class="wrapper">
 
+    <div id="step-1-wrap">
+      <h1>Touch an image to find out clues about the ancestral Pueblo people</h1>
 
+      <!-- Handlebars template -->
+      <script id="template-1" type="text/x-handlebars-template">
+        {{#each options}}
+          <div class="section">
+            <img src="../assets/images/{{machine_name}}/button.jpg">
+            <h3>{{title}}</h3>
+          </div>
+        {{/each}}
+      </script>
+
+      <div id="step-1-output"></div>
+    </div>
+
+    <!--<div class="hidden">
+      <video id="videoPlayer" class="video-js vjs-default-skin" preload="auto" height="768" width="1024">
+        <source src="../assets/videos/video1.mp4" type='video/mp4'>
+      </video>
+    </div>
+    <div id="back" class="hidden">Back</div>-->
 
   </div>
-
-  <!--<div class="hidden">
-    <video id="videoPlayer" class="video-js vjs-default-skin" preload="auto" height="768" width="1024">
-      <source src="../assets/videos/video1.mp4" type='video/mp4'>
-    </video>
-  </div>
-  <div id="back" class="hidden">Back</div>-->
 
   <script src="../libs/jquery-2.0.3.min.js"></script>
   <script src="../libs/handlebars.js"></script>
   <script src="../libs/video.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/base.js"></script>
+
   <!--<script src="js/video_kiosk.js"></script>
   <script src="js/screensaver.js"></script>
   <script>
