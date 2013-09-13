@@ -27,11 +27,6 @@ h1, h2 {
   letter-spacing: 0.07em;
   font-family: "Tungsten-Semibold";
 }
-h1 span {
-  display: block;
-  font-weight: bold;
-  font-size: 1.8em;
-}
 h3 {
   color: #FFFFFF;
   font-family: "ProximaNova Semibold", "Myriad Pro";
