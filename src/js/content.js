@@ -1,43 +1,39 @@
 var content = {
   options: [
     {
-      title : "Contemporary Pueblo people",
+      title : "Pueblo People",
       questions : [
-        "How are contemporary Pueblo people connected to this region and the ancestral Pueblo people?",
-        "Do modern Pueblo people live like their ancestors did?",
-        "What do contemporary Pueblo people know about where the ancestral Pueblo people went?",
-        "What do contemporary people do to preserve knowledge of the past?",
-        "Why are ancestral Pueblo sites important to contemporary Pueblo people?"
+        "Who were the Pueblo people?",
+        "What language did they speak?",
+        "How did stories about Pueblo people survive for thousands of years?",
+        "How did their way of life change after they moved south?"
       ]
     },
     {
-      title : "Corn",
+      title : "Everyday Life",
       questions : [
-        "Why is corn an important part of the history of the Mesa Verde region?",
-        "Why is corn farming important to Pueblo people past and present?",
-        "When did they start growing corn?",
-        "How did they farm in this dry region?",
-        "Did the ancestral Pueblo people stop hunting after they could grow corn?"
+        "How did corn farming change everything for the Pueblo people?",
+        "How did they thrive in such a dry region?",
+        "What challenges did they face?",
+        "What activities did Pueblo people enjoy doing?"
       ]
     },
     {
-      title : "Pueblo dwellings",
+      title : "Their Dwellings",
       questions : [
-        "Did everyone live in the cliffs?",
-        "Why did people move to the cliffs?",
-        "Why did people live in different settlements at different times?",
-        "Did the ancestral Pueblo people live in cities?",
-        "Why are these sites special to modern Pueblo people?"
+        "What were Pueblo dwellings like?",
+        "What was it like to live in a Pueblo village 800 years ago?",
+        "How did Pueblo people adapt their homes to a changing environment?",
+        "Why did some people move to the cliffs?"
       ]
     },
     {
-      title : "Mesa Verde region",
+      title : "The Place",
       questions : [
-        "Where did the ancestral Pueblo people go?",
-        "Why did the ancestral Pueblo people move away?",
-        "How is the Mesa Verde region bigger than just the national park?",
-        "How many people lived in the Mesa Verde region?",
-        "When and why did the ancestral Pueblo people choose this place to live?"
+        "What is the Mesa Verde region?",
+        "How were Pueblo people connected to the world beyond Mesa Verde?",
+        "Where did the Pueblo people go?",
+        "Why did the Pueblo people move away?"
       ]
     }
   ]
