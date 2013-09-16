@@ -6,30 +6,39 @@ body {
   width: 1366px;
   overflow: hidden;
 }
-div.wrapper {
-  padding: 90px 42px;
-}
 div.step {
   margin: 0 auto;
 }
 
-h1 {
-  color: #f8f1d6;
+h1, h4 {
   font-size: 23px;
   font-family: Archer;
   font-weight: normal;
-  margin-bottom: 20px;
 }
 h2 {
+  font-family: "Tungsten-Medium";
   text-transform: uppercase;
+  font-size: 98px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
 }
 h3 {
   font-family: "Tungsten";
   font-size: 36px;
   text-transform: uppercase;
 }
+h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
 
 /* Step 1 */
+h1 {
+  margin-bottom: 20px;
+}
+#step-1-wrap {
+  padding: 90px 42px;
+}
 div.section {
   float: left;
   margin-right: 34px;
@@ -44,20 +53,30 @@ div.section:last-child {
 }
 
 /* Step 2 */
+h2 {
+  padding: 66px 0 0 0;
+  margin-bottom: 50px;
+}
+h2, h4 {
+  padding-left: 36px;
+}
 .option ul {
   float: left;
-  width: 50%;
 }
 .option li {
-  font-size: 32px;
-  color: #FFFFFF;
-  padding-bottom: 20px;
+  width: 486px;
+  padding: 18px 70px 26px 50px;
+  font-size: 23px;
+  line-height: 25px;
+  color: #392819;
+  font-family: "Proxima Nova";
+  background: rgba(152, 146, 122, .7);
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+  height: 38px;
 }
 .option img {
   float: right;
-  width: 50%;
-  height: 540px;
-  width: 720px;
 }
 
 .back {
