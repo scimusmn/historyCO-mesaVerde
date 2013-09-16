@@ -14,8 +14,8 @@
       <h1>Choose a topic</h1>
       <script id="template-1" type="text/x-handlebars-template">
         {{#each options}}
-          <div class="section" data-option-id="{{machine_name}}">
-            <img src="../assets/images/{{machine_name}}/button.jpg">
+          <div class="section" data-option-id="{{setIndex @index}}">
+            <img src="../assets/images/topic_{{setIndex @index}}/button.jpg">
             <h3>{{title}}</h3>
           </div>
         {{/each}}
@@ -26,14 +26,14 @@
     <div class="step" id="step-2-wrap">
       <script id="template-2" type="text/x-handlebars-template">
         {{#each options}}
-          <div class="option" data-option-id="{{machine_name}}">
+          <div class="option" data-option-id="{{setIndex @index}}">
             <h2>{{title}}</h2>
             <ul>
               {{#each questions}}
                 <li>{{this}}</li>
               {{/each}}
             </ul>
-            <img src="../assets/images/{{machine_name}}/step2.jpg">
+            <img src="../assets/images/{{setIndex @index}}/step2.jpg">
           </div>
         {{/each}}
       </script>

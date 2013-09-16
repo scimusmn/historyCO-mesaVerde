@@ -8,8 +8,7 @@ var content = {
         "What do contemporary Pueblo people know about where the ancestral Pueblo people went?",
         "What do contemporary people do to preserve knowledge of the past?",
         "Why are ancestral Pueblo sites important to contemporary Pueblo people?"
-      ],
-      machine_name : "cpp"
+      ]
     },
     {
       title : "Corn",
@@ -19,8 +18,7 @@ var content = {
         "When did they start growing corn?",
         "How did they farm in this dry region?",
         "Did the ancestral Pueblo people stop hunting after they could grow corn?"
-      ],
-      machine_name : "corn"
+      ]
     },
     {
       title : "Pueblo dwellings",
@@ -30,8 +28,7 @@ var content = {
         "Why did people live in different settlements at different times?",
         "Did the ancestral Pueblo people live in cities?",
         "Why are these sites special to modern Pueblo people?"
-      ],
-      machine_name : "pdwells"
+      ]
     },
     {
       title : "Mesa Verde region",
@@ -41,8 +38,7 @@ var content = {
         "How is the Mesa Verde region bigger than just the national park?",
         "How many people lived in the Mesa Verde region?",
         "When and why did the ancestral Pueblo people choose this place to live?"
-      ],
-      machine_name : "mvreg"
+      ]
     }
   ]
 };
