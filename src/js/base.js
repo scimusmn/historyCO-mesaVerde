@@ -4,22 +4,20 @@
 
 $(function() {
 
+  // Add a human-readable value, not zero-based, index value
   Handlebars.registerHelper('setIndex', function(value){
-    this.index = Number(value + 1); // Human-readable value, not zero-based
+    this.index = Number(value + 1);
     return this.index;
   });
 
-  // Get our step 1 template and turn it into HTML
-  var source   = $('#template-1').html();
-  var template = Handlebars.compile(source);
-
-  // Pull in the content object from content.js
-  $('#step-1-output').html(template(content));
-
-  // Samesies for step 2 template (TODO - loop these)
-  var step_2_source = $('#template-2').html();
-  var step_2_template = Handlebars.compile(step_2_source);
-  $('#step-2-output').html(step_2_template(content));
+  // Render step 1 and step 2 content in their Handlebars templates
+  var i = 1;
+  while (i <= 2) {
+    var source = $('#template-' + i).html(),
+        template = Handlebars.compile(source);
+    $('#step-'+ i +'-output').html(template(content));
+    i++;
+  }
 
   // Navigation over to step 2
   $('div.section').click(function() {
