@@ -54,8 +54,8 @@ div.section:last-child {
 
 /* Step 2 */
 h2 {
-  padding: 66px 0 0 0;
-  margin-bottom: 50px;
+  padding: 56px 0 0 0;
+  margin-bottom: 30px;
 }
 h2, h4 {
   padding-left: 36px;
@@ -65,7 +65,7 @@ h2, h4 {
 }
 .option li {
   width: 486px;
-  padding: 18px 70px 26px 50px;
+  padding: 20px 70px 27px 50px;
   font-size: 23px;
   line-height: 25px;
   color: #392819;
@@ -73,17 +73,26 @@ h2, h4 {
   background: rgba(152, 146, 122, .7);
   margin-bottom: 30px;
   box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-  height: 38px;
+  height: 40px;
 }
 .option img {
   float: right;
 }
 
 .back {
-  clear: both;
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  z-index: 2;
+  float: right;
+  box-shadow: 0 0 8px rgba(0,0,0,0.7);
   text-align: center;
+  padding: 14px 20px 10px;
+  font-size: 26px;
+  color: #1a0d05;
+  background: rgba(188,183,162,0.49);
   text-transform: uppercase;
-  padding-top: 30px;
+  font-family: "Tungsten";
 }
 .hidden,
 .option {
