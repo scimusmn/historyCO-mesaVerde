@@ -8,46 +8,45 @@
 
 <body>
 
-  <div class="wrapper">
+  <div class="step" id="step-1-wrap">
+    <h1>Choose a topic</h1>
+    <script id="template-1" type="text/x-handlebars-template">
+      {{#each options}}
+        <div class="section" data-option-id="{{setIndex @index}}">
+          <img src="../assets/images/topic_{{setIndex @index}}/button.jpg">
+          <h3>{{title}}</h3>
+        </div>
+      {{/each}}
+    </script>
+    <div id="step-1-output"></div>
+  </div>
 
-    <div class="step" id="step-1-wrap">
-      <h1>Choose a topic</h1>
-      <script id="template-1" type="text/x-handlebars-template">
-        {{#each options}}
-          <div class="section" data-option-id="{{setIndex @index}}">
-            <img src="../assets/images/topic_{{setIndex @index}}/button.jpg">
-            <h3>{{title}}</h3>
-          </div>
-        {{/each}}
-      </script>
-      <div id="step-1-output"></div>
-    </div>
+  <div class="step" id="step-2-wrap">
+    <script id="template-2" type="text/x-handlebars-template">
+      {{#each options}}
+        <div class="option" data-option-id="{{setIndex @index}}">
+          <h2>{{title}}</h2>
+          <h4>Choose a question</h4>
+          <ul>
+            {{#each questions}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+          <img src="http://placekitten.com/712/442">
+          <!--<img src="../assets/images/{{setIndex @index}}/step2.jpg">-->
+        </div>
+      {{/each}}
+    </script>
+    <div id="step-2-output"></div>
 
-    <div class="step" id="step-2-wrap">
-      <script id="template-2" type="text/x-handlebars-template">
-        {{#each options}}
-          <div class="option" data-option-id="{{setIndex @index}}">
-            <h2>{{title}}</h2>
-            <ul>
-              {{#each questions}}
-                <li>{{this}}</li>
-              {{/each}}
-            </ul>
-            <img src="../assets/images/{{setIndex @index}}/step2.jpg">
-          </div>
-        {{/each}}
-      </script>
-      <div id="step-2-output"></div>
-      <div class="back hidden" data-dest="step-1">Back</div>
-    </div>
-
-    <!--<div class="hidden">
+        <!--<div class="hidden">
       <video id="videoPlayer" class="video-js vjs-default-skin" preload="auto" height="768" width="1024">
         <source src="../assets/videos/video1.mp4" type='video/mp4'>
       </video>
     </div>
-    <div class="back" data-dest="step-2">Back</div>-->
+    -->
 
+    <div class="back hidden" data-dest="step-1">Back to menu</div>
   </div>
 
   <script src="../libs/jquery-2.0.3.min.js"></script>
