@@ -4,6 +4,11 @@
 
 $(function() {
 
+  Handlebars.registerHelper('setIndex', function(value){
+    this.index = Number(value + 1); // Human-readable value, not zero-based
+    return this.index;
+  });
+
   // Get our step 1 template and turn it into HTML
   var source   = $('#template-1').html();
   var template = Handlebars.compile(source);
