@@ -42,6 +42,7 @@ $(function() {
 
   // Back buttons
   $('.back').click(function() {
+    $('.active-question').removeClass('active-question');
     var destination = $(this).attr('data-dest'); // where are we going?
     // Hide current screen and move to destination
     $('.active').fadeOut('fast', function() {
