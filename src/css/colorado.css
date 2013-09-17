@@ -62,7 +62,7 @@ h2 {
 h2, h4 {
   padding-left: 36px;
 }
-#question-wrap {
+.question-wrap {
   float: left;
 }
 .area {
