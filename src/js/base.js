@@ -11,18 +11,6 @@ $(function() {
       // Path is relative to index.html
       videoPath = '../assets/videos/';
 
-  // Unbind video.js default behavior of rewinding the video when it ends
-  // We're providing our own "ended" event.
-  videoPlayer.off('ended', videoPlayer.ended);
-  videoPlayer.off('ended', function() {
-    if (this.options.loop) {
-      this.currentTime(0);
-      this.play();
-    } else {
-      this.pause();
-    }
-  });
-
   // Add a human-readable value, not zero-based, index value for use in templates
   Handlebars.registerHelper('setIndex', function(value){
     this.index = Number(value + 1);
