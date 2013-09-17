@@ -1,15 +1,10 @@
 /**
- * @file base.js
+ * @file mesa_verde.js
  * Code here renders the content into their Handlebars templates,
  * handles navigation between the menu and the topics, and allows
  * the user to select videos within the active topic.
  */
 $(function() {
-
-  var $videoOption = $('.question-box'),
-      videoPlayer = videojs('videoPlayer'),
-      // Path is relative to index.html
-      videoPath = '../assets/videos/';
 
   // Add a human-readable value, not zero-based, index value for use in templates
   Handlebars.registerHelper('setIndex', function(value){
@@ -38,11 +33,15 @@ $(function() {
     });
   });
 
-  // Initialize the videojs plugin.
+  // Set up some variables for videoJS
+  var $videoOption = $('.question-box'),
+      videoPlayer = videojs('videoPlayer');
+
+  // Initialize the videoJS API
   videoPlayer.ready(function() {
 
     // Question selector for each topic screen
-    $('.question-box').click(function() {
+    $videoOption.click(function() {
       var selected_video = $(this).attr('data-video'),
           video_path = '../assets/videos/topic_' + selected_topic + '/' + selected_video + '.mp4';
 
@@ -50,9 +49,13 @@ $(function() {
       $('.active-question').removeClass('active-question');
       $(this).addClass('active-question');
 
-      // Show the video
-      console.log('Playing ' + video_path);
-      $('video source').attr('src', video_path);
+      // Show and play the video
+      $('.option img').fadeOut('fast', function() {
+        $('#videoPlayer').fadeIn('fast', function() {
+          videoPlayer.src(video_path).play();
+        });
+      });
+
     });
 
     // "Back to menu" buttons

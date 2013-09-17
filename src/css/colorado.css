@@ -91,7 +91,7 @@ h2, h4 {
   vertical-align: middle;
 }
 .option img,
-video {
+#videoPlayer {
   float: right;
 }
 
