@@ -48,7 +48,7 @@ var screensaver = function() {
 
   // Fade out content, show the screensaver video
   $('.wrapper').fadeOut('fast', function() {
-    $('.hidden').not('#back').show();
+    $('.hidden').not('.back').not('.step').show();
   });
 
   // Change the source, change the size, start playback
