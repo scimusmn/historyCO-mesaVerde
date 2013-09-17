@@ -11,7 +11,7 @@ div.step {
 }
 
 h1, h4 {
-  font-size: 23px;
+  font-size: 26px;
   font-family: Archer;
   font-weight: normal;
 }
@@ -24,12 +24,14 @@ h2 {
 }
 h3 {
   font-family: "Tungsten";
-  font-size: 36px;
+  font-size: 40px;
   text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 4px;
 }
 h4 {
-  font-size: 18px;
-  margin-bottom: 12px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 /* Step 1 */
@@ -54,8 +56,8 @@ div.section:last-child {
 
 /* Step 2 */
 h2 {
-  padding: 56px 0 0 0;
-  margin-bottom: 30px;
+  padding: 46px 0 0 0;
+  margin-bottom: 14px;
 }
 h2, h4 {
   padding-left: 36px;
