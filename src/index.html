@@ -27,11 +27,15 @@
         <div class="option" data-option-id="{{setIndex @index}}">
           <h2>{{title}}</h2>
           <h4>Choose a question</h4>
-          <ul>
+          <div id="question-wrap">
             {{#each questions}}
-              <li>{{this}}</li>
+              <div class="area">
+                <div class="question-box">
+                  <p>{{this}}</p>
+                </div>
+              </div>
             {{/each}}
-          </ul>
+          </div>
           <img src="http://placekitten.com/712/442">
           <!--<img src="../assets/images/{{setIndex @index}}/step2.jpg">-->
         </div>
@@ -39,12 +43,11 @@
     </script>
     <div id="step-2-output"></div>
 
-        <!--<div class="hidden">
+    <div class="hidden">
       <video id="videoPlayer" class="video-js vjs-default-skin" preload="auto" height="768" width="1024">
         <source src="../assets/videos/video1.mp4" type='video/mp4'>
       </video>
     </div>
-    -->
 
     <div class="back hidden" data-dest="step-1">Back to menu</div>
   </div>

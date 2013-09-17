@@ -62,20 +62,30 @@ h2 {
 h2, h4 {
   padding-left: 36px;
 }
-.option ul {
+#question-wrap {
   float: left;
 }
-.option li {
-  width: 486px;
-  padding: 20px 70px 27px 50px;
+.area {
+  position: relative;
+  margin-bottom: 30px;
+  height: 86px;
+}
+.question-box {
+  position: absolute;
+  height: 86px;
+  width: 606px;
+  background: rgba(152, 146, 122, .7);
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+  display: table;
+}
+.question-box p {
   font-size: 23px;
+  padding: 0 70px 0 50px;
   line-height: 25px;
   color: #392819;
   font-family: "Proxima Nova";
-  background: rgba(152, 146, 122, .7);
-  margin-bottom: 30px;
-  box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-  height: 40px;
+  display: table-cell;
+  vertical-align: middle;
 }
 .option img {
   float: right;
