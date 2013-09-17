@@ -6,6 +6,23 @@
  */
 $(function() {
 
+  var $videoOption = $('.question-box'),
+      videoPlayer = videojs('videoPlayer'),
+      // Path is relative to index.html
+      videoPath = '../assets/videos/';
+
+  // Unbind video.js default behavior of rewinding the video when it ends
+  // We're providing our own "ended" event.
+  videoPlayer.off('ended', videoPlayer.ended);
+  videoPlayer.off('ended', function() {
+    if (this.options.loop) {
+      this.currentTime(0);
+      this.play();
+    } else {
+      this.pause();
+    }
+  });
+
   // Add a human-readable value, not zero-based, index value for use in templates
   Handlebars.registerHelper('setIndex', function(value){
     this.index = Number(value + 1);
@@ -23,40 +40,48 @@ $(function() {
 
   // Navigation over to step 2
   $('div.section').click(function() {
-    var selected = $(this).attr('data-option-id');
+    selected_topic = $(this).attr('data-option-id');
     // Show the selected content
     $('#step-1-wrap').fadeOut('slow', function() {
-      $('div[data-option-id="'+ selected +'"]').add('#step-2-wrap .back').show();
+      $('div[data-option-id="'+ selected_topic +'"]').add('#step-2-wrap .back').show();
       $('#step-2-wrap').fadeIn('fast', function() {
         $(this).addClass('active');
       });
     });
   });
 
-  // Question selector for each topic screen
-  $('.question-box').click(function() {
-    // Change the color of the selected question
-    $('.active-question').removeClass('active-question');
-    $(this).addClass('active-question');
-    // Show the video
-    $('.option img').hide();
-    $('.hidden.video').show();
-  });
+  // Initialize the videojs plugin.
+  videoPlayer.ready(function() {
 
-  // Back buttons
-  $('.back').click(function() {
-    // Reset the button classes and the topic images
-    $('.active-question').removeClass('active-question');
-    $('.hidden.video').hide();
-    $('.option img').show();
+    // Question selector for each topic screen
+    $('.question-box').click(function() {
+      var selected_video = $(this).attr('data-video'),
+          video_path = '../assets/videos/topic_' + selected_topic + '/' + selected_video + '.mp4';
 
-    var destination = $(this).attr('data-dest'); // where are we going?
-    // Hide current screen and move to destination
-    $('.active').fadeOut('fast', function() {
-      $('.active .option').hide();
-      $(this).removeClass('active');
-      $('#' + destination + '-wrap').fadeIn('fast');
+      // Change the color of the selected question
+      $('.active-question').removeClass('active-question');
+      $(this).addClass('active-question');
+
+      // Show the video
+      console.log('Playing ' + video_path);
+      $('video source').attr('src', video_path);
     });
+
+    // "Back to menu" buttons
+    $('.back').click(function() {
+      restartKiosk();
+    });
+
   });
+
+  /**
+   * Restart the kiosk:
+   * Fade out the video screen, then reload the page.
+   */
+  var restartKiosk = function() {
+    $('.step').fadeOut('fast', function() {
+      location.reload();
+    });
+  }
 
 });
