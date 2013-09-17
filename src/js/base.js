@@ -38,11 +38,18 @@ $(function() {
     // Change the color of the selected question
     $('.active-question').removeClass('active-question');
     $(this).addClass('active-question');
+    // Show the video
+    $('.option img').hide();
+    $('.hidden.video').show();
   });
 
   // Back buttons
   $('.back').click(function() {
+    // Reset the button classes and the topic images
     $('.active-question').removeClass('active-question');
+    $('.hidden.video').hide();
+    $('.option img').show();
+
     var destination = $(this).attr('data-dest'); // where are we going?
     // Hide current screen and move to destination
     $('.active').fadeOut('fast', function() {
