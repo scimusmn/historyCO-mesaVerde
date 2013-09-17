@@ -67,16 +67,19 @@ h2, h4 {
 }
 .area {
   position: relative;
-  margin-bottom: 30px;
-  height: 86px;
+  margin-bottom: 29px;
+  height: 88px;
 }
 .question-box {
   position: absolute;
-  height: 86px;
+  height: 88px;
   width: 606px;
   background: rgba(152, 146, 122, .7);
   box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
   display: table;
+}
+.question-box.active-question {
+  background: rgba(234, 244, 244, .7);
 }
 .question-box p {
   font-size: 23px;

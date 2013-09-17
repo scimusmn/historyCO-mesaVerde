@@ -1,10 +1,12 @@
 /**
- * Render content from templates on the page and handle navigation
+ * @file base.js
+ * Code here renders the content into their Handlebars templates,
+ * handles navigation between the menu and the topics, and allows
+ * the user to select videos within the active topic.
  */
-
 $(function() {
 
-  // Add a human-readable value, not zero-based, index value
+  // Add a human-readable value, not zero-based, index value for use in templates
   Handlebars.registerHelper('setIndex', function(value){
     this.index = Number(value + 1);
     return this.index;
@@ -29,6 +31,13 @@ $(function() {
         $(this).addClass('active');
       });
     });
+  });
+
+  // Question selector for each topic screen
+  $('.question-box').click(function() {
+    // Change the color of the selected question
+    $('.active-question').removeClass('active-question');
+    $(this).addClass('active-question');
   });
 
   // Back buttons
