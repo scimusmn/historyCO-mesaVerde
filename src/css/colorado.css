@@ -2,8 +2,8 @@ body {
   background: url(../../assets/images/background.jpg) repeat;
   color: #f7eed4;
   border: 1px dashed gray;
-  height: 768px;
-  width: 1366px;
+  height: 1080px;
+  width: 1920px;
   overflow: hidden;
 }
 div.step {
@@ -11,7 +11,7 @@ div.step {
 }
 
 h1, h4 {
-  font-size: 26px;
+  font-size: 35px;
   font-family: Archer;
   font-weight: normal;
 }
@@ -24,13 +24,13 @@ h2 {
 }
 h3 {
   font-family: "Tungsten";
-  font-size: 40px;
+  font-size: 59px;
   text-transform: uppercase;
   font-weight: normal;
   margin-top: 4px;
 }
 h4 {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
@@ -47,8 +47,8 @@ div.section {
 }
 div.section img {
   box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-  width: 295px;
-  height: 495px;
+  width: 417px;
+  height: 695px;
 }
 div.section:last-child {
   margin-right: 0;
@@ -67,13 +67,13 @@ h2, h4 {
 }
 .area {
   position: relative;
-  margin-bottom: 29px;
+  margin-bottom: 76px;
   height: 88px;
 }
 .question-box {
   position: absolute;
-  height: 88px;
-  width: 606px;
+  height: 120px;
+  width: 850px;
   background: rgba(152, 146, 122, .7);
   box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
   display: table;
@@ -82,10 +82,10 @@ h2, h4 {
   background: rgba(234, 244, 244, .7);
 }
 .question-box p {
-  font-size: 23px;
+  font-size: 26px;
   padding: 0 70px 0 50px;
-  line-height: 25px;
-  color: #392819;
+  line-height: 30px;
+  color: #392800;
   font-family: "Proxima Nova";
   display: table-cell;
   vertical-align: middle;
