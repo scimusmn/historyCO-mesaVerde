@@ -27,11 +27,6 @@ $(function() {
         });
       });
 
-      // Back button returns you to the video options and stops the video
-      $('#back').click(function() {
-        restartKiosk();
-      });
-
     });
 
     // When the video ends, go back to the start page
