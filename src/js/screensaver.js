@@ -50,7 +50,9 @@ var screensaver = function() {
   $('.wrapper').fadeOut('fast', function() {
     console.log('faddin')
 
-    $('.hidden').not('.back').not('.step').show();
+    $('.hidden').not('.back').not('.step').show(function(){
+      console.log('showin');
+    });
   });
 
   // Change the source, change the size, start playback
@@ -58,7 +60,7 @@ var screensaver = function() {
 
   savedScreen = true; // The screen has been saved!
 
-  wakeUp(videoPlayer); // Watch for action, which will reload the page
+  //wakeUp(videoPlayer); // Watch for action, which will reload the page
 
 }
 
