@@ -41,25 +41,30 @@ function timerIncrement() {
  */
 var screensaver = function() {
   console.log('screensavin')
+  // Not sure what this does
   var videoPlayer = videojs('videoPlayer'), playing = !videoPlayer.paused();
-
-  // Add the "loop" attribute
+  // Clear the custom styles for the video player wrapper
+  $('#videoPlayer').removeAttr('style');
+  // Hack...that doesn't work
+  $('#videoPlayer').attr('style', 'display:block; top: 0px; left: 0px; z-index: -1000; width: 1920px; height: 1024px;');
+  // Make the video loop
   $('video').prop('loop', true);
+  // Set the screensaver path and play it.
+  videoPlayer.src('../assets/videos/screensaver.mp4').play();
 
   // Fade out content, show the screensaver video
-  $('.wrapper').fadeOut('fast', function() {
-    console.log('faddin')
+  //$('.hidden').not('.back').not('.step').show();
+  //$('.wrapper').fadeOut('fast', function() {
+    //console.log('faddin')
 
-    $('.hidden').not('.back').not('.step').show(function(){
-      console.log('showin');
-    });
-  });
-
-  // Change the source, change the size, start playback
-  videoPlayer.src('../assets/videos/screensaver.mp4').play();
+    //$('.hidden').not('.back').not('.step').show(function(){
+      //console.log('showin');
+    //});
+  //});
 
   savedScreen = true; // The screen has been saved!
 
+  // Commented out for testing
   //wakeUp(videoPlayer); // Watch for action, which will reload the page
 
 }
