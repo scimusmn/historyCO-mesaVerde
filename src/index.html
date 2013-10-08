@@ -9,45 +9,47 @@
 
 <body>
 
-  <div class="step" id="step-1-wrap">
-    <h1>Choose a topic</h1>
-    <script id="template-1" type="text/x-handlebars-template">
-      {{#each options}}
-        <div class="section" data-option-id="{{setIndex @index}}">
-          <img src="../assets/images/topic_{{setIndex @index}}/button.jpg">
-          <h3>{{title}}</h3>
-        </div>
-      {{/each}}
-    </script>
-    <div id="step-1-output"></div>
-  </div>
-
-  <div class="step" id="step-2-wrap">
-    <script id="template-2" type="text/x-handlebars-template">
-      {{#each options}}
-        <div class="option" data-option-id="{{setIndex @index}}">
-          <h2>{{title}}</h2>
-          <h4>Choose a question</h4>
-          <div class="question-wrap">
-            {{#each questions}}
-              <div class="area">
-                <div class="question-box" data-video="video_{{setIndex @index}}">
-                  <p>{{this}}</p>
-                </div>
-              </div>
-            {{/each}}
+  <div class="wrapper">
+    <div class="step" id="step-1-wrap">
+      <h1>Choose a topic</h1>
+      <script id="template-1" type="text/x-handlebars-template">
+        {{#each options}}
+          <div class="section" data-option-id="{{setIndex @index}}">
+            <img src="../assets/images/topic_{{setIndex @index}}/button.jpg">
+            <h3>{{title}}</h3>
           </div>
-          <img src="../assets/images/topic_{{setIndex @index}}/step2.jpg">
-        </div>
-      {{/each}}
-    </script>
-    <div id="step-2-output"></div>
+        {{/each}}
+      </script>
+      <div id="step-1-output"></div>
+    </div>
 
-    <video id="videoPlayer" class="hidden video-js vjs-default-skin" preload="auto" height="620" width="1000">
-      <source src="../assets/videos/topic_1/video_1.mp4" type='video/mp4'>
-    </video>
+    <div class="step" id="step-2-wrap">
+      <script id="template-2" type="text/x-handlebars-template">
+        {{#each options}}
+          <div class="option" data-option-id="{{setIndex @index}}">
+            <h2>{{title}}</h2>
+            <h4>Choose a question</h4>
+            <div class="question-wrap">
+              {{#each questions}}
+                <div class="area">
+                  <div class="question-box" data-video="video_{{setIndex @index}}">
+                    <p>{{this}}</p>
+                  </div>
+                </div>
+              {{/each}}
+            </div>
+            <img src="../assets/images/topic_{{setIndex @index}}/step2.jpg">
+          </div>
+        {{/each}}
+      </script>
+      <div id="step-2-output"></div>
 
-    <div class="back hidden" data-dest="step-1">Back to menu</div>
+      <video id="videoPlayer" class="hidden video-js vjs-default-skin" preload="auto" height="620" width="1000">
+        <source src="../assets/videos/topic_1/video_1.mp4" type='video/mp4'>
+      </video>
+
+      <div class="back hidden" data-dest="step-1">Back to menu</div>
+    </div>
   </div>
 
   <script src="../libs/jquery-2.0.3.min.js"></script>
@@ -57,13 +59,13 @@
   <script src="js/mesa_verde.js"></script>
   <script src="js/video_kiosk.js"></script>
 
-  <!--<script src="js/screensaver.js"></script>
+  <script src="js/screensaver.js"></script>
   <script>
       // Launch the screensaver on a footer double-click
       // Handy for testing - this is not part of the production build.
       $('body').dblclick(function() {
         screensaver();
       });
-    </script>-->
+    </script>
 </body>
 </html>
