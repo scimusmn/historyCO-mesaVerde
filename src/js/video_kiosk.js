@@ -29,21 +29,20 @@ $(function() {
 
     });
 
-    // When the video ends, go back to the start page
+    // Reload section when video ends
     this.on('ended', function(){
-      restartKiosk(this);
+      reloadSection();
     });
 
   });
 
-  /**
-   * Restart the kiosk:
-   * Fade out the video screen, then reload the page.
-   */
-  var restartKiosk = function() {
-    $('.hidden').fadeOut('fast', function() {
-      location.reload();
-    });
-  }
+  // Find the current section, set a flag in the URL, and reload the page.
+  // We reload the page right now because of Chrome stability issues.
+  // In the future it would be nice to skip this to prevent the loading flash.
+  var reloadSection = function() {
+    currentSection = $('div.active').attr('current_section');
+    window.location.hash = currentSection;
+    location.reload();
+  };
 
 });
