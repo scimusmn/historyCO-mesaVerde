@@ -40,14 +40,16 @@ function timerIncrement() {
  * Screensaver: Loop the screensaver video in full-screen mode.
  */
 var screensaver = function() {
-  var videoPlayer = videojs('videoPlayer'),
-      playing = !videoPlayer.paused();
+  console.log('screensavin')
+  var videoPlayer = videojs('videoPlayer'), playing = !videoPlayer.paused();
 
   // Add the "loop" attribute
   $('video').prop('loop', true);
 
   // Fade out content, show the screensaver video
   $('.wrapper').fadeOut('fast', function() {
+    console.log('faddin')
+
     $('.hidden').not('.back').not('.step').show();
   });
 
