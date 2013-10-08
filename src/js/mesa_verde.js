@@ -28,10 +28,23 @@ $(function() {
     $('#step-1-wrap').fadeOut('slow', function() {
       $('div[data-option-id="'+ selected_topic +'"]').add('#step-2-wrap .back').show();
       $('#step-2-wrap').fadeIn('fast', function() {
+        $(this).attr('current_section', selected_topic);
         $(this).addClass('active');
       });
     });
   });
+
+  // Set a hash in the URL to indicate which section page we're on.
+  var hash = window.location.hash;
+  if (hash) { // First kiosk load
+    selected_topic = hash.substring(1);
+    $('#step-1-wrap').hide(0, function() {
+      $('div[data-option-id="'+ selected_topic +'"]').add('#step-2-wrap .back').show();
+      $('#step-2-wrap').show(function() {
+        $(this).addClass('active');
+      });
+    });
+  }
 
   // Set up some variables for videoJS
   var $videoOption = $('.question-box'),
@@ -68,9 +81,12 @@ $(function() {
   /**
    * Restart the kiosk:
    * Fade out the video screen, then reload the page.
+   * Reset the hash to NULL. We use that to indicate which topic we are on.
+   * The home page is not a section page.
    */
   var restartKiosk = function() {
     $('.step').fadeOut('fast', function() {
+      window.location.hash = '';
       location.reload();
     });
   }
