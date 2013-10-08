@@ -5,10 +5,10 @@
 
 $(function() {
 
- var $videoOption = $('.videoBox'),
-      videoPlayer = videojs('videoPlayer'),
-      // Path is relative to index.html
-      videoPath = '../assets/videos/';
+  var $videoOption = $('.videoBox'),
+    videoPlayer = videojs('videoPlayer'),
+    // Path is relative to index.html
+    videoPath = '../assets/videos/';
 
   // Unbind video.js default behavior of rewinding the video when it ends
   // We're providing our own "ended" event.
