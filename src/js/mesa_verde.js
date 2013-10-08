@@ -41,6 +41,7 @@ $(function() {
     $('#step-1-wrap').hide(0, function() {
       $('div[data-option-id="'+ selected_topic +'"]').add('#step-2-wrap .back').show();
       $('#step-2-wrap').show(function() {
+        $(this).attr('current_section', selected_topic);
         $(this).addClass('active');
       });
     });
