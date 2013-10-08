@@ -10,19 +10,7 @@ $(function() {
     // Path is relative to index.html
     videoPath = '../assets/videos/';
 
-  // Unbind video.js default behavior of rewinding the video when it ends
-  // We're providing our own "ended" event.
-  videoPlayer.off('ended', videoPlayer.ended);
-  videoPlayer.off('ended', function() {
-    if (this.options.loop) {
-      this.currentTime(0);
-      this.play();
-    } else {
-      this.pause();
-    }
-  });
-
-  // Initialize the videojs plugin.
+  // Initialize the Video.js plugin.
   videoPlayer.ready(function() {
 
     // Set the video source when one is selected
