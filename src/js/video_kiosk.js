@@ -17,8 +17,6 @@ $(function() {
     $videoOption.click(function() {
       var video = $(this).attr('data-video-source');
 
-      console.log('Playing ' + videoPath + video);
-
       // Change the video source
       videoPlayer.src(videoPath + video);
 
