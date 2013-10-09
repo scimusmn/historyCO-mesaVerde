@@ -71,6 +71,15 @@ $(function() {
 
     });
 
+    // Find the current section, set a flag in the URL, and reload the page.
+    // We reload the page right now because of Chrome stability issues.
+    // In the future it would be nice to skip this to prevent the loading flash.
+    var reloadSection = function() {
+      currentSection = $('div.active').attr('current_section');
+      window.location.hash = currentSection;
+      location.reload();
+    };
+
     // "Back to menu" buttons
     $('.back').click(function() {
       restartKiosk();
