@@ -30,6 +30,7 @@ $(function () {
  */
 function timerIncrement() {
   idleTime = idleTime + 1;
+  var playing = !videojs('videoPlayer').paused();
   if ((idleTime > 2) && (!playing) && (!savedScreen)) {
     screensaver();
   }
