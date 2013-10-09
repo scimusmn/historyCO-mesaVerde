@@ -68,6 +68,11 @@ $(function() {
         });
       });
 
+      // Reload section when video ends
+      videoPlayer.on('ended', function(){
+        reloadSection();
+      });
+
     });
 
     // Find the current section, set a flag in the URL, and reload the page.
