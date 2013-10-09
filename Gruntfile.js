@@ -12,8 +12,7 @@ module.exports = function(grunt) {
               'libs/handlebars.js',
               'src/js/content.js',
               'src/js/mesa_verde.js',
-              'src/js/screensaver.js',
-              'src/js/video_kiosk.js'
+              'src/js/screensaver.js'
             ]
           }
         }
