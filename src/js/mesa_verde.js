@@ -28,8 +28,7 @@ $(function() {
     $('#step-1-wrap').fadeOut('slow', function() {
       $('div[data-option-id="'+ selected_topic +'"]').add('#step-2-wrap .back').show();
       $('#step-2-wrap').fadeIn('fast', function() {
-        $(this).attr('current_section', selected_topic);
-        $(this).addClass('active');
+        $(this).attr('current_section', selected_topic).addClass('active');
       });
     });
   });
