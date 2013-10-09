@@ -44,8 +44,9 @@ var screensaver = function() {
 
   // Make the video loop
   $('video').prop('loop', true);
-  // Set the screensaver path and play it.
-  videojs('videoPlayer').src('../assets/videos/screensaver.mp4').play();
+
+  // Set the screensaver path and play it full-screen
+  videojs('videoPlayer').src('../assets/videos/screensaver.mp4').dimensions(1920, 1080).play();
 
   // Fade out content, show the screensaver video
   $('.hidden').not('.back').not('.step').show();
@@ -56,7 +57,7 @@ var screensaver = function() {
   savedScreen = true; // The screen has been saved!
 
   // Commented out for testing
-  //wakeUp(videojs('videoPlayer')); // Watch for action, which will reload the page
+  wakeUp(videojs('videoPlayer')); // Watch for action, which will reload the page
 
 }
 
