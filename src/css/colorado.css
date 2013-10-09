@@ -128,12 +128,6 @@ h2, h4 {
 .vjs-default-skin .vjs-slider-handle {
   display: none;
 }
-
-/**
- * @TODO or maybe @BUG - progress bar only appears once you
- * hover over it, which isn't going to happen on the touchscreen.
- * Will need to find whatever controls that and override it here.
- */
 .vjs-fade-in,.vjs-fade-out {
   visibility: visible !important;
   opacity: 1 !important;
@@ -142,6 +136,7 @@ h2, h4 {
 .vjs-default-skin .vjs-control-bar {
   background: none;
   bottom: -65px !important;
+  display: block !important;
 }
 .vjs-default-skin .vjs-progress-control,
 .vjs-default-skin:hover .vjs-progress-control {
@@ -150,6 +145,7 @@ h2, h4 {
   font-size: 1em;
   -webkit-transition: none !important;
   transition-duration: 0s!important;
+  display: block;
 }
 .vjs-default-skin .vjs-slider {
   background: #3c1f0b;
