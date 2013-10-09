@@ -47,13 +47,10 @@ var screensaver = function() {
   videojs('videoPlayer').src('../assets/videos/screensaver.mp4').play();
 
   // Fade out content, show the screensaver video
-  //$('.hidden').not('.back').not('.step').show();
-  //$('.wrapper').fadeOut('fast', function() {
-
-    //$('.hidden').not('.back').not('.step').show(function(){
-      //console.log('showin');
-    //});
-  //});
+  $('.hidden').not('.back').not('.step').show();
+  $('.wrapper').fadeOut('fast', function() {
+    $('.hidden').not('.back').not('.step').show();
+  });
 
   savedScreen = true; // The screen has been saved!
 
