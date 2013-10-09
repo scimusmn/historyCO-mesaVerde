@@ -48,7 +48,8 @@ $(function() {
   }
 
   // Set up some variables for videoJS
-  var $videoOption = $('.question-box'), videoPlayer = videojs('videoPlayer');
+  var $videoOption = $('.question-box'),
+      videoPlayer = videojs('videoPlayer');
 
   // Initialize the videoJS API
   videoPlayer.ready(function() {
