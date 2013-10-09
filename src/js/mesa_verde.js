@@ -22,7 +22,7 @@ $(function() {
   }
 
   // Navigation over to step 2
-  $('div.section').click(function() {
+  $('.section').click(function() {
     selected_topic = $(this).attr('data-option-id');
     // Show the selected content
     $('#step-1-wrap').fadeOut('slow', function() {
