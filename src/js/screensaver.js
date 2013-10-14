@@ -56,8 +56,8 @@ var screensaver = function() {
 
   savedScreen = true; // The screen has been saved!
 
-  // Commented out for testing
-  wakeUp(videojs('videoPlayer')); // Watch for action, which will reload the page
+  // Watch for action, which will reload the page
+  wakeUp(videojs('videoPlayer'));
 
 }
 
